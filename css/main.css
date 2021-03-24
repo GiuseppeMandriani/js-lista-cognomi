@@ -6,7 +6,35 @@
 }
 
 body{
-    color: #000;
+    color: #fff;
     font-family: sans-serif;
+    background: linear-gradient(90deg, rgb(0, 76, 109),rgb(2,166,141));
+    text-align: center;
+}
+
+header{
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border-bottom: 3px dotted rgb(0, 76, 109);
+
+}
+
+/* List */
+
+ul {
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    background: rgba(0, 75, 105, 0.75);
+    /* background: linear-gradient(90deg, rgb(2,166,141), rgb(0, 76, 109)); */
+    box-shadow: 0 20px 5px -10px rgba(2, 166, 141, 0.25);
+
 }
 

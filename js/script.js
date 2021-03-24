@@ -42,7 +42,49 @@ console.log(surnames);
 // FASE 5 Stampa lista e posizionamento in array
 
 var position = (1 + surnames.indexOf(lastName));
-console.log(position);
+console.log('La tua posizione è: ', position);
+document.getElementById('result').innerHTML = 'La tua posizione è ' + position;
+
+
+
+
+
+// Inserire elementi in lista 
+
+// For
+
+var items ='';
+
+for (var i = 0; i <surnames.length; i++) {
+
+    // Metodo1
+    /* Manipolazione del DOM n volte quindi sconveniente*/
+
+    // document.getElementById('list-surnames').innerHTML += '<li>' + surnames[i] + '</li>';
+
+    // Metodo 2
+    /* Manipolazione del DOM una sola volta */
+
+    items += '<li>' + surnames[i] + '</li>';
+    
+    
+}
+
+document.getElementById('list-surnames').innerHTML = items;
+
+
+// While
+
+// var items = '';
+// var count = 0
+// while(count < surnames.length){
+//     items += '<li>' + surnames[count] + '</li>';
+//     count++;
+
+// }
+
+// document.getElementById('list-surnames').innerHTML = items;
+
 
 
 

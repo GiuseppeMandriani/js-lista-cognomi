@@ -41,7 +41,7 @@ ul li{
 h3{
     padding: 1rem;
     text-transform: uppercase;
-    background: rgba(0, 75, 105, 0.75);
+    /* background: rgba(0, 75, 105, 0.75); */
     width: 800px;
     margin: 0 auto;
 

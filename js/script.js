@@ -41,11 +41,10 @@ console.log(surnames);
 
 // FASE 5 Stampa lista e posizionamento in array
 
-surnames.forEach(myFunction);
+var position = (1 + surnames.indexOf(lastName));
+console.log(position);
 
-function myFunction(item, index) {
-  document.getElementById("prova").innerHTML += index+1 + ":" + item + "<br>"; 
-}
+
 
 
 

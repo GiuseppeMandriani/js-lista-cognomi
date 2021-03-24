@@ -14,7 +14,9 @@ var surnames = [
     'preziosa',
     'colorado',
     'pinco',
-    'pallino'];
+    'pallino',
+    'quadro',
+    'zorro'];
 
 // Fase  Richiesta Dato all'utente 
 
@@ -32,4 +34,18 @@ if (found){
     surnames.push(lastName);
 }
 
+// FASE 4 Ordinamento array ordine alfabetico e stampa
+
+surnames.sort();
 console.log(surnames);
+
+// FASE 5 Stampa lista e posizionamento in array
+
+surnames.forEach(myFunction);
+
+function myFunction(item, index) {
+  document.getElementById("prova").innerHTML += index+1 + ":" + item + "<br>"; 
+}
+
+
+

@@ -26,13 +26,15 @@ console.log(lastName);
 // Fase 3 Verifica presenza elemento ed eventuale inserimento in array
 
 var found = surnames.includes(lastName);
-
-
-if (found){
-    console.log('Benvenuto ' + lastName )
-} else {
     surnames.push(lastName);
-}
+
+
+
+// if (found){
+//     console.log('Benvenuto ' + lastName )
+// } else {
+//     surnames.push(lastName);
+// }
 
 // FASE 4 Ordinamento array ordine alfabetico e stampa
 

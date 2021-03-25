@@ -18,47 +18,49 @@ var surnames = [
     'quadro',
     'zorro'];
 
-// Fase  Richiesta Dato all'utente 
+// Fase 2  Richiesta Dato all'utente 
 
-var lastName = prompt('Inserire cognome').toLowerCase();
+var lastName = prompt('Inserire cognome');
+
+while (lastName === null || lastName.trim() === ''){
+    lastName = prompt('Prego inserire un valore valido')
+}
+
+lastName = lastName.toLowerCase().trim();
+
 console.log(lastName);
 
-// Fase 3 Verifica presenza elemento ed eventuale inserimento in array
-
-var found = surnames.includes(lastName);
-    // surnames.push(lastName);
-
-
-
-if (found){
-    console.log('Benvenuto (utente già registrato)' + lastName )
-} else {
-    surnames.push(lastName);
-    console.log('Nuovo utente')
-}
+// Fase 3 Inserimento cognome nell'array
+surnames.push(lastName);
 
 // FASE 4 Ordinamento array ordine alfabetico e stampa
 
-surnames.sort();
-console.log(surnames);
+surnamesOrdinata = surnames.slice();
+surnamesOrdinata.sort();
 
-// FASE 5 Stampa lista e posizionamento in array
+// Posizionamento
 
-var position = (1 + surnames.indexOf(lastName));
-console.log('La tua posizione è: ', position);
-document.getElementById('result').innerHTML = 'La tua posizione è ' + position;
+var posUsers = surnamesOrdinata.indexOf(lastName) + 1;
 
 
 
+// FASE 5 Stampa lista 
+
+console.log('Lista originale ', surnames);
+console.log('Lista odinata ', surnamesOrdinata);
+console.log('Posizione: ', posUsers);
 
 
-// Inserire elementi in lista 
+
+
+
+// Inserire elementi in lista  e stampa su schermo
 
 // For
 
 var items ='';
 
-for (var i = 0; i <surnames.length; i++) {
+for (var i = 0; i <surnamesOrdinata.length; i++) {
 
     // Metodo1
     /* Manipolazione del DOM n volte quindi sconveniente*/
@@ -68,7 +70,7 @@ for (var i = 0; i <surnames.length; i++) {
     // Metodo 2
     /* Manipolazione del DOM una sola volta */
 
-    items += '<li>' + surnames[i] + '</li>';
+    items += '<li>' + surnamesOrdinata[i] + '</li>';
     
     
 }
@@ -76,17 +78,7 @@ for (var i = 0; i <surnames.length; i++) {
 document.getElementById('list-surnames').innerHTML = items;
 
 
-// While
-
-// var items = '';
-// var count = 0
-// while(count < surnames.length){
-//     items += '<li>' + surnames[count] + '</li>';
-//     count++;
-
-// }
-
-// document.getElementById('list-surnames').innerHTML = items;
+document.getElementById('result').innerHTML = 'La tua posizione è la numero: ' + posUsers;
 
 
 
